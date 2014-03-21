@@ -1,0 +1,28 @@
+<h1>Análise de Sentimento</h1>
+
+<h2>Análise de Frase</h2>
+<%= simple_form_for @test_subject_a,
+url: "/test_subjects/analyze_phrase",
+method: "POST",
+html: { id: :"phrase-form", class: :"analyzer-form" },
+remote: true do |a| %>
+<div>
+  <%= a.input :phrase, input_html: { maxlength: 140 } %>
+  <%= a.button :submit, value: "Analisar" %>
+</div>
+<div class="percentage-div"></div>
+<% end %>
+
+<h2>Analisar Palavra no Twitter</h2>
+<%= simple_form_for @test_subject_b,
+url: "/test_subjects/analyze_word",
+method: "POST",
+html: { id: :"word-form", class: :"analyzer-form" },
+remote: true do |b| %>
+<div>
+  <%= b.input :word, input_html: { maxlength: 25 } %>
+  <%= b.button :submit, value: "Analisar" %>
+</div>
+<div class="percentage-div"></div>
+<% end %>
+

@@ -1,4 +1,7 @@
 Bipolar::Application.routes.draw do
+  root to: "home#index"
+  post "test_subjects/analyze_phrase"
+  post "test_subjects/analyze_word"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -19,8 +19,9 @@ development:
   encoding: unicode
   database: bipolar_development
   pool: 5
-  username: bipolar
-  password:
+  username: postgres
+  password: bola10
+  host: localhost
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,8 +49,9 @@ test:
   encoding: unicode
   database: bipolar_test
   pool: 5
-  username: bipolar
-  password:
+  username: postgres
+  password: bola10
+  host: localhost
 
 production:
   adapter: postgresql
